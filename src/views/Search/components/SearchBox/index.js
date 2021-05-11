@@ -9,7 +9,6 @@ const SearchBox = ({ onSearch, onClose }) => {
     const handleInputValue = ({ target: { value } }) => setSearchText(value);
 
     const clearInputClose = () => {
-        setSearchText("");
         onClose();
     };
 
@@ -24,7 +23,7 @@ const SearchBox = ({ onSearch, onClose }) => {
                         className="seach-box-input"
                     />
                 </label>
-                <button onClick={onSearch}>Buscar</button>
+                <button onClick={() => onSearch(searchText)}>Buscar</button>
                 <button onClick={clearInputClose}>Cerrar</button>
             </div>
         </div>
