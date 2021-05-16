@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import SearchBox from "./components/SearchBox"
+import SearchBox from "./components/SearchBox";
+import SearchResults from './components/SearchTextResults';
 import "./styles.css";
 import data from '../../data/users.json';
 
@@ -26,13 +27,14 @@ const Search = () => {
     console.log(results);
 
     const handleCloseClick = () => {
-        setIsAtTop("Cerrar");
+        setIsAtTop(false);
         setResults([]);
     };
 
     return (
         <div className={`search ${isAtTop === "Buscar" ? "search-top" : "search-center"}`}>
-            <SearchBox onSearch={handleSeachClick} onClose={handleCloseClick} />
+            <SearchBox onSearch={handleSeachClick} onClose={handleCloseClick} isSearching={isAtTop} />
+            <SearchResults results={results} isSearching={isAtTop} />
         </div>
     );
 };
