@@ -14,3 +14,35 @@
     font-size: 3.5em;
     color: blueviolet;
 }
+
+.btn-buscar {
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    width: 5rem;
+    height: 2rem;
+    margin-left: 10px;
+    transition-duration: .5s;
+}
+
+.btn-cerrar {
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    width: 5rem;
+    height: 2rem;
+    margin-left: 10px;
+    transition-duration: .5s;
+}
+
+.btn-buscar:hover, .btn-cerrar:hover {
+    background-color: rgb(70, 70, 252);
+    transition: .5s;
+}
+
+.search-box-input {
+    width: 20rem;
+    height: 1.5rem;
+    border: 0.1px solid gray;
+    margin-top: 2.5px;
+}

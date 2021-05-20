@@ -21,11 +21,12 @@ const SearchBox = ({ onSearch, onClose, isSearching }) => {
                     <input
                         value={searchText}
                         onChange={handleInputValue}
-                        className="seach-box-input"
+                        className="search-box-input"
                     />
                 </label>
 
                 <button
+                    className="btn-buscar"
                     onClick={() => onSearch(searchText)}
                     disabled={!searchText.length}>
                     Buscar
@@ -33,6 +34,7 @@ const SearchBox = ({ onSearch, onClose, isSearching }) => {
 
                 {isSearching &&
                     <button
+                        className="btn-cerrar"
                         onClick={clearInputClose}
                         disabled={!searchText.length}>
                         Cerrar

@@ -1,4 +1,5 @@
 import './styles.css';
+import SearchResultsItems from './SearchResultsItems/SearchResultsItems';
 
 const SearchResults = ({ results, isSearching }) => {
     return (
@@ -10,10 +11,7 @@ const SearchResults = ({ results, isSearching }) => {
             {
                 results?.map((value) => {
                     return (
-                        <div className="seach-results" key={value.id}>
-                            <p>{value.name}</p>
-                            <p>{value.email}</p>
-                        </div>
+                        <SearchResultsItems key={value.id} {...value} />
                     );
                 })
             }
